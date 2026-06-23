@@ -1,4 +1,4 @@
-build/
+Arduino/build/
 *.o
 *.elf
 *.hex

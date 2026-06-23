@@ -13,7 +13,7 @@ PORT       = COM3
 BAUD       = 115200
 
 CFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -Wall -Wextra -std=c11 \
-        -Idrivers/millis -Idrivers/spi -Idrivers/uart
+        -Idrivers/millis -Idrivers/spi -Idrivers/uart -Iconfig
 
 SRCS = \
 	src/main.c \
