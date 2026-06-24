@@ -7,6 +7,7 @@
 #include "board.h"
 #include "millis.h"
 #include "uart.h"
+#include "uart_protocol.h"
 
 #define blink_timer 250
 
