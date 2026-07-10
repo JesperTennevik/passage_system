@@ -176,6 +176,7 @@ static access_cmd_t parse_cmd(const char *cmd_str){
     if(strcmp(cmd_str, "ERR") == 0)     { return ACCESS_CMD_ERR; }
     if(strcmp(cmd_str, "TIMEOUT") == 0) { return ACCESS_CMD_TIMEOUT; }
     if(strcmp(cmd_str, "LOCKED") == 0)  { return ACCESS_CMD_LOCKED; }
+    if(strcmp(cmd_str, "NACK") == 0)  { return ACCESS_CMD_NACK; }
     
     return ACCESS_CMD_UNKNOWN;
 }
