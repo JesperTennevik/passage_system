@@ -8,6 +8,7 @@
 #include "millis.h"
 #include "uart.h"
 #include "uart_protocol.h"
+#include "mfrc522.h"
 
 #define blink_timer 250
 

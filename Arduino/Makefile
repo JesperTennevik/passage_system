@@ -13,7 +13,8 @@ PORT       = COM3
 BAUD       = 115200
 
 CFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -Wall -Wextra -std=c11 \
-        -Idrivers/millis -Idrivers/spi -Idrivers/uart -Iconfig -Idrivers/uart_protocol
+        -Idrivers/millis -Idrivers/spi -Idrivers/uart -Iconfig -Idrivers/uart_protocol \
+		-Idrivers/mfrc522rfid
 
 SRCS = \
 	src/main.c \
@@ -21,6 +22,7 @@ SRCS = \
 	drivers/uart/uart.c \
 	drivers/uart/ring_buffer.c \
 	drivers/uart_protocol/uart_protocol.c \
+	drivers/mfrc522rfid/mfrc522.c \
 	drivers/spi/spi.c
 
 OBJS = $(SRCS:%.c=$(BUILD_DIR)/%.o)
