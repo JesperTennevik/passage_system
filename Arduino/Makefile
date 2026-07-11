@@ -14,7 +14,7 @@ BAUD       = 115200
 
 CFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -Wall -Wextra -std=c11 \
         -Idrivers/millis -Idrivers/spi -Idrivers/uart -Iconfig -Idrivers/uart_protocol \
-		-Idrivers/mfrc522rfid
+		-Idrivers/mfrc522rfid -Idrivers/servo
 
 SRCS = \
 	src/main.c \
@@ -23,6 +23,7 @@ SRCS = \
 	drivers/uart/ring_buffer.c \
 	drivers/uart_protocol/uart_protocol.c \
 	drivers/mfrc522rfid/mfrc522.c \
+	drivers/servo/SG90.c \
 	drivers/spi/spi.c
 
 OBJS = $(SRCS:%.c=$(BUILD_DIR)/%.o)

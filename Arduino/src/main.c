@@ -9,6 +9,7 @@
 #include "uart.h"
 #include "uart_protocol.h"
 #include "mfrc522.h"
+#include "SG90.h"
 
 #define blink_timer 250
 
