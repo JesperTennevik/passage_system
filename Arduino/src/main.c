@@ -10,6 +10,8 @@
 #include "uart_protocol.h"
 #include "mfrc522.h"
 #include "SG90.h"
+#include "74HC595.h"
+#include "keypad.h"
 
 #define blink_timer 250
 
