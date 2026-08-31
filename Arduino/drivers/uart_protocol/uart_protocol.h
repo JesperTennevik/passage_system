@@ -1,5 +1,5 @@
-#ifndef ACCESS_PROTOCOL_H
-#define ACCESS_PROTOCOL_H
+#ifndef UART_PROTOCOL_H
+#define UART_PROTOCOL_H
 
 #include <stdint.h>
 
@@ -42,7 +42,7 @@ typedef struct {
 
 void access_init();
 
-access_status_t access_send_uid(const char *uid);
+access_status_t access_send_uid(const char *uid, const char *door_id);
 access_status_t access_send_pin(uint16_t sid, const char *pin);
 access_status_t access_read_msg(access_msg_t *msg);
 

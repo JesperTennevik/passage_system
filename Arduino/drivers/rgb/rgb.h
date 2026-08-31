@@ -1,7 +1,15 @@
-#ifndef LED_RGB_H
-#define LED_RGB_H
+#ifndef RGB_H
+#define RGB_H
 
-#include "74HC595.h"
+typedef enum rgb_color_e{
+    RGB_OFF,
+    RGB_RED,
+    RGB_GREEN,
+    RGB_BLUE,
+    RGB_YELLOW,
+    RGB_MAGENTA,
+    RGB_CYAN
+} rgb_color_e;
 
 void rgb_init();
 
@@ -23,6 +31,7 @@ void rgb_set_blue();
 void rgb_set_yellow();
 void rgb_set_magenta();
 void rgb_set_cyan();
+void rgb_set_color(rgb_color_e color);
 
 void rgb_off();
 void rgb_on();

@@ -3,6 +3,7 @@
 #include <avr/pgmspace.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 #include "uart.h"
 #include "millis.h"
@@ -143,8 +144,11 @@ static access_status_t send_payload(uint16_t sid, const char *cmd, const char *d
     return ACCESS_STATUS_OK;
 }
 
-access_status_t access_send_uid(const char *uid){
-    return send_payload(0, CMD_UID, uid);
+access_status_t access_send_uid(const char *uid, const char *door_id){
+    char data[32];
+    snprintf(data, sizeof(data), "%s|%s", uid, door_id);
+
+    return send_payload(0, CMD_UID, data);
 }
 
 access_status_t access_send_pin(uint16_t sid, const char *pin){

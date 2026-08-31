@@ -27,7 +27,7 @@ static const char keypad_map[4][4] = {
 void keypad_init(void){
     sr_set_mask_high(KEYPAD_MASK);
 
-    DDRD &= ~(1 << PD7) | (1 << PD6) | (1 << PD5) | (1 << PD4);
+    DDRD &= ~((1 << PD7) | (1 << PD6) | (1 << PD5) | (1 << PD4));
 
     PORTD |= (1 << PD7) | (1 << PD6) | (1 << PD5) | (1 << PD4);
 }

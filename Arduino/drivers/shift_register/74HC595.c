@@ -3,11 +3,15 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-static volatile uint8_t sr_reg;
+static uint8_t sr_reg;
 
 #define SR_RCLK_DDR DDRD
 #define SR_RCLK_PORT PORTD
 #define SR_RCLK_PIN PD2
+
+#define SR_SRCLK_DDR DDRB
+#define SR_SRCLK_PORT PORTB
+#define SR_SRCLK_PIN PB5
 
 void sr_init(){
     SR_RCLK_DDR |= (1 << SR_RCLK_PIN);
