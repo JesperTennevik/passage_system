@@ -15,7 +15,7 @@ BAUD       = 115200
 CFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -Wall -Wextra -std=c11 \
         -Idrivers/millis -Idrivers/spi -Idrivers/uart -Iconfig -Idrivers/uart_protocol \
 		-Idrivers/mfrc522rfid -Idrivers/servo -Idrivers/shift_register \
-		-Idrivers/keypad
+		-Idrivers/rgb -Idrivers/keypad -Istate_machine -Istate_machine/states 
 
 SRCS = \
 	src/main.c \
@@ -27,6 +27,15 @@ SRCS = \
 	drivers/servo/SG90.c \
 	drivers/shift_register/74HC595.c \
 	drivers/keypad/keypad.c \
+	drivers/rgb/rgb.c \
+	state_machine/state_machine.c \
+	state_machine/states/state_input_await.c \
+	state_machine/states/state_error_blink.c \
+	state_machine/states/state_idle.c \
+	state_machine/states/state_request_sid.c \
+	state_machine/states/state_send_pin.c \
+	state_machine/states/state_access_denied.c \
+	state_machine/states/state_access_granted.c \
 	drivers/spi/spi.c
 
 OBJS = $(SRCS:%.c=$(BUILD_DIR)/%.o)

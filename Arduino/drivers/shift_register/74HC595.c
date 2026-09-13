@@ -3,7 +3,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-static uint8_t sr_reg;
+static volatile uint8_t sr_reg;
 
 #define SR_RCLK_DDR DDRD
 #define SR_RCLK_PORT PORTD

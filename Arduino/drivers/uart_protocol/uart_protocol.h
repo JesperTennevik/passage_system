@@ -31,7 +31,8 @@ typedef enum {
     ACCESS_CMD_TIMEOUT,
     ACCESS_CMD_LOCKED,
     ACCESS_CMD_UNKNOWN,
-    ACCESS_CMD_NACK
+    ACCESS_CMD_NACK,
+    ACCESS_CMD_UNEXPECTED
 } access_cmd_t;
 
 typedef struct {

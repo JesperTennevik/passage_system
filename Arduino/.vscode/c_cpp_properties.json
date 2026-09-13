@@ -4,12 +4,15 @@
         "name": "AVR",
         "includePath": [
           "/avr/include",
-          "/avr/lib/gcc/avr/15.2.0/include",  // Justera versionsnumret!
+          "/avr/lib/gcc/avr/15.2.0/include",
           "/avr/lib/gcc/avr/15.2.0/include-fixed",
           "${workspaceFolder}",
           "${workspaceFolder}/drivers/**",
           "${workspaceFolder}/src",
-          "${workspaceFolder}/config"
+          "${workspaceFolder}/config",
+          "${workspaceFolder}/state_machine",
+          "${workspaceFolder}/state_machine/**",
+          "${workspaceFolder}/state_machine/states"
         ],
         "defines": [
           "__AVR_ATmega328P__",
